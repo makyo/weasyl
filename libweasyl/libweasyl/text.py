@@ -72,7 +72,8 @@ MISAKA_EXT = (
     misaka.EXT_NO_INDENTED_CODE_BLOCKS)
 
 MISAKA_FORMAT = (
-    misaka.HTML_HARD_WRAP)
+    misaka.HTML_HARD_WRAP |
+    misaka.HTML_SMARTYPANTS)
 
 
 def strip_outer_tag(html):

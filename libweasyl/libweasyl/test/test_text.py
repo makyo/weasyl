@@ -113,6 +113,10 @@ def test_markdown_respect_ordered_list_start():
     assert markdown('5. five\n6. six\n7. seven') == '<ol start="5"><li>five</li><li>six</li><li>seven</li></ol>'
 
 
+def test_markdown_smartypants_rendering():
+    assert markdown('"SmartyPants additions..."') == u'<p>&ldquo;SmartyPants additions&hellip;&rdquo;</p>'),
+
+
 markdown_link_tests = [
     (('spam', '/eggs'), '[spam](/eggs)'),
     ((']spam[', '/eggs'), r'[\]spam\[](/eggs)'),
